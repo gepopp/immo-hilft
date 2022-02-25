@@ -1,0 +1,73 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+.content {
+
+    p, ul, h1, h2, h3, h4, h5 {
+        @apply mb-4;
+    }
+
+    h1, h2, h3, h4, h5 {
+        @apply text-gray-800 dark:text-white font-semibold;
+    }
+
+    h1 {
+        @apply mt-10 text-3xl lg:text-5xl font-bold;
+    }
+
+    h2 {
+        @apply mt-5 text-2xl lg:text-4xl font-semibold;
+    }
+
+    h3 {
+        @apply mt-3 text-xl lg:text-3xl font-semibold;
+    }
+
+    h4 {
+        @apply text-lg lg:text-xl font-medium;
+    }
+
+    h5 {
+        @apply font-semibold text-lg;
+    }
+
+    address {
+        @apply font-medium italic;
+    }
+
+    ul {
+        @apply pl-10;
+
+        li {
+            @apply list-disc;
+        }
+
+    }
+
+    p {
+        @apply dark:text-white;
+    }
+
+    a {
+        @apply underline;
+    }
+
+    dt {
+        @apply font-semibold;
+    }
+
+    .excerpt {
+        @apply font-semibold text-lg;
+    }
+
+    img {
+        @apply my-4;
+    }
+
+    cite {
+        @apply block m-5 bg-gray-800 bg-opacity-25 p-5 text-lg italic;
+    }
+
+}

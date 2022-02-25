@@ -9,11 +9,28 @@ module.exports = {
     ],
 
     theme: {
+        container:{
+            center: true,
+            padding:"15px",
+            screens: {
+                'sm': '640px',
+                'md': '768px',
+                'lg': '1024px',
+                'xl': '1280px',
+            }
+        },
         extend: {
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
             },
+            colors:{
+                flag:{
+                    yellow: '#ffd700',
+                    blue: '#0057b8'
+                }
+            }
         },
+
     },
 
     plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
