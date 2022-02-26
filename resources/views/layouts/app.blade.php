@@ -27,6 +27,7 @@
 
         gtag('config', 'G-3GG69ZBPML');
     </script>
+    <link rel="stylesheet" type="text/css" href="{{asset("vendor/cookie-consent/css/cookie-consent.css")}}">
 @livewireStyles
 
 <!-- Scripts -->
