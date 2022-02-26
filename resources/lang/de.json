@@ -723,5 +723,16 @@
     "Subscribe to our Email updates, we will send you a message as soon as we started.":"Melden Sie sich zu unseren Updates an wir Informieren Sie sobald es los geht.",
     "This Link is not valid anymore, your subscription has been deleted. Please signup again.": "Dieser Link ist nicht mehr gültig. Ihre Anmeldung wurde gelöscht! Bitte melden Sie sich noch einmal an",
     "Thank you, you are now successfully subscribed.": "Vielen Dank! Sie sind nun erfolgreich angemeldet",
-    "contribute" : "mitmachen"
+    "contribute" : "mitmachen",
+    "Yes, keep me informed about IMMO HILFT via email." : "Ja, ich will weitere Informationen über die Aktivitäten von IMMO-HILFT erhalten.",
+    "Address of the living space": "Adresse des Wohnraums",
+    "Zip": "Postleitzahl",
+    "State": "Bundesland",
+    "Square meter": "Quadratmeter des Wohnraums",
+    "Rooms" : "Anzahl Zimmer des Wohnraums",
+    "Available from": "Verfügbar ab",
+    "Available to" : "Verfügbar bis",
+    "Description of linivng space": "Kurze Beschreibung des Wohnraums (Art, Erreichbarkeit, Ausstattung, etc.)",
+    "Company" : "Firmenname",
+    "Phone": "Telefonnummer"
 }

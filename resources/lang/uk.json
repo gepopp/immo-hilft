@@ -722,6 +722,17 @@
     "Subscribe to our Email updates, we will send you a message as soon as we started.":"Підпишіться на наші оновлення електронною поштою, ми надішлемо вам повідомлення, як тільки почнемо.",
     "This Link is not valid anymore, your subscription has been deleted. Please signup again.": "Ця ссилка більше не дійсна, ваша підписка скасована . Будь ласка, зареєструйтеся ще раз.",
     "Thank you, you are now successfully subscribed.": "Дякуємо, тепер ви успішно підписалися.",
-    "contribute" : "брати участь"
+    "contribute" : "брати участь",
+    "Yes, keep me informed about IMMO HILFT via email." : "Так, я хочу отримати більше інформації про діяльність IMMO-HILFT.",
+    "Company" : "Назва компанії",
+    "Phone": "телефонний номер",
+    "Address of the living space": "Адреса житлового приміщення",
+    "Zip": "ZIP / Місто",
+    "State": "федеративна земля",
+    "Square meter": "квадратних метрів житлової площі",
+    "Rooms" : "Кількість кімнат",
+    "Available from": "доступний з",
+    "Available to" : "Доступний до",
+    "Description of linivng space": "Короткий опис житлового приміщення (тип, доступність, обладнання тощо)"
 
 }

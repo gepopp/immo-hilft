@@ -51,11 +51,13 @@
                                x-transition:leave-end="opacity-0 scale-90">
 
                                 @if(session('applocale') == 'uk')
-                                    В ініціативі «Immo Hilft» саме цим ми і займаємося в галузі нерухомості. Ініціатори закликають надати тимчасово порожні квартири для біженців з України. Таким чином кожен може надати допомогу швидко і без бюрократії.<br>
+                                    В ініціативі «Immo Hilft» саме цим ми і займаємося в галузі нерухомості. Ініціатори закликають надати тимчасово порожні квартири для біженців з України. Таким чином кожен може надати допомогу швидко і без бюрократії.
+                                    <br>
                                     Якщо кожна велика компанія в Австрії вирішить надати ОДНУ квартиру, ми можемо запропонувати притулок до 5000 осіб. Ми звертаємося не тільки до компаній, ми також вдячні за будь-яку допомогу від приватних осіб. Давайте триматися разом і допомагати людям, які терміново потребують нашої допомоги прямо зараз!
 
                                 @else
-                                    Die Initiatoren – Beacon Invest, EHL, goreeo, Hawlik Gerginski, KE Wohnimmobilien, REMAX Austria, Walter Senk, Michaela Unteregger und Zeiger Immobilien Marketing rufen dazu auf, temporär leere Räume für geflüchtete Menschen aus der Ukraine zur Verfügung zu stellen.<br>
+                                    Die Initiatoren – Beacon Invest, EHL, goreeo, Hawlik Gerginski, KE Wohnimmobilien, REMAX Austria, Walter Senk, Michaela Unteregger und Zeiger Immobilien Marketing rufen dazu auf, temporär leere Räume für geflüchtete Menschen aus der Ukraine zur Verfügung zu stellen.
+                                    <br>
                                     So kann jeder und jede rasch und ohne Bürokratie Hilfe leisten. Entscheidet sich jedes größere Immo-Unternehmen in Österreich dazu, EINE Wohnung bereitzustellen, bieten wir damit bis zu 5.000 Menschen eine Zuflucht. Wir appellieren aber nicht nur an Unternehmen, sondern sind auch für jede Hilfeleistung von Privatpersonen dankbar. Halten wir zusammen und helfen wir Menschen, die unsere Hilfe gerade dringend benötigen!
                                 @endif
                             </p>
@@ -68,12 +70,14 @@
         </div>
     </div>
     <div class="bg-flag-blue min-h-screen bg-left section-bg-left" style="background-image: url( {{ asset('images/wohnraum-bg.svg') }}); background-size: 33.33%; background-repeat: repeat-y;">
-        <div class="container py-24"
-             x-data="{ show: 0 }"
-             x-init="
-            interval = window.setInterval(() => show++, 400);
-            $watch('show', (show) => show > 4 ? clearInterval(interval) : null)
-        ">
+        <div class="container py-24">
+            <div class="flex justify-end">
+                <div class="w-full md:w-1/2 flex justify-end md:justify-center items-center">
+                    <div class="max-w-xl">
+                        @livewire('donate-space-form')
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </x-app-layout>
