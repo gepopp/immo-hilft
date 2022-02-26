@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 html{
-    @apply smooth-scroll;
+    scroll-behavior: smooth;
 }
 
 .content {
