@@ -6,7 +6,7 @@
 
             @saved.window="show = true"
         >
-            <div x-show="show" class="bg-green-300 bg-opacity-25 text-gray-900 p-5 text-center mg-4">
+            <div x-show="show" x-cloak class="bg-green-300 bg-opacity-25 text-gray-900 p-5 text-center mg-4">
                 <p>{{__('Thank you. We have sent you an Email. Please check your Inbox and use the Link in that Email to confirm your subscription.')}}</p>
             </div>
         </div>
