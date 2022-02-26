@@ -49,6 +49,9 @@
             <a href="{{ route('terms') }}">Datenschutzerklärung</a>
             <a href="{{ route('impressum') }}">Impressum</a>
         </div>
+        <div>
+            made with &#128150; by <a href="https://poppgerhard.at" target="_blank">poppgerhard.at</a>
+        </div>
     </div>
 </footer>
 
