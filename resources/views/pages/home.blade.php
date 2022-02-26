@@ -82,8 +82,8 @@
     </div>
 
     <div class="container py-24">
-        <div class="flex content">
-            <div class="w-full md:w-1/2 flex flex-col md:flex-row justify-end md:justify-center items-center">
+        <div class="flex flex-col md:flex-row content">
+            <div class="w-full md:w-1/2 flex justify-end md:justify-center items-center">
                 <div class="max-w-xl">
                     @if(session('applocale') == 'uk')
                         <h1>Ми знаємо, що житлової площі обмаль. Крім того, ми також будемо вдячні, якщо ви можете зробити пожертву на рахунок Caritas:</h1>
