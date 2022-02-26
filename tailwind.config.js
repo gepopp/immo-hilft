@@ -9,9 +9,9 @@ module.exports = {
     ],
 
     theme: {
-        container:{
+        container: {
             center: true,
-            padding:"15px",
+            padding: "15px",
             screens: {
                 'sm': '640px',
                 'md': '768px',
@@ -23,11 +23,9 @@ module.exports = {
             fontFamily: {
                 sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
             },
-            colors:{
-                flag:{
-                    yellow: '#ffd700',
-                    blue: '#0057b8'
-                }
+            colors: {
+                "flag-yellow": '#ffd700',
+                "flag-blue": '#0057b8'
             }
         },
 
