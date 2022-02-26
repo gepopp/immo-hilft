@@ -35,3 +35,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 Route::get('newsletter/verifiy/{id}/{hash}', [\App\Http\Controllers\SubscriberController::class, 'verify'])->name('newsletter.verify');
+Route::get('space/verifiy/{id}/{hash}', [\App\Http\Controllers\SpaceRegistrationController::class, 'verify'])
+    ->middleware('signed')
+    ->name('space.verify');

@@ -8,6 +8,27 @@ use App\Http\Requests\UpdateSpaceRegistrationRequest;
 
 class SpaceRegistrationController extends Controller
 {
+    public function verify($id, $hash){
+
+        $space = SpaceRegistration::find($id);
+
+        if(!$space || sha1($space->email) !== $hash){
+
+           abort(401);
+
+        }
+
+
+        $space->markEmailAsVerified();
+
+        session()->flash('message', __('Thank you, your space was submitted successfully.'));
+        return view('space-verified');
+
+
+    }
+
+
+
     /**
      * Display a listing of the resource.
      *

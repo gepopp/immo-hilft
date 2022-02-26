@@ -734,5 +734,6 @@
     "Available to" : "Verfügbar bis",
     "Description of linivng space": "Kurze Beschreibung des Wohnraums (Art, Erreichbarkeit, Ausstattung, etc.)",
     "Company" : "Firmenname",
-    "Phone": "Telefonnummer"
+    "Phone": "Telefonnummer",
+    "Thank you, your space was submitted successfully." : "Vielen Dank. Ihr Wohnraum wurde erfolgreich eingereicht."
 }
