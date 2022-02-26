@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Immo hilft</title>
+    <title>IMMO-HILFT</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,8 +43,8 @@
 </div>
 
 
-<footer class="mt-auto flex">
-    <div class="container flex flex-col md:flex-row justify-between text-sm border-t dark:border-gray-700 py-4">
+<footer class="mt-auto flex border-t dark:border-gray-700">
+    <div class="container flex flex-col md:flex-row justify-between text-sm py-4">
         <div class="flex space-x-5">
             <a href="{{ route('terms') }}">Datenschutzerklärung</a>
             <a href="{{ route('impressum') }}">Impressum</a>
