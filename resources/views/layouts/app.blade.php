@@ -44,7 +44,7 @@
 
 
 <footer class="mt-auto flex">
-    <div class="container flex justify-between text-sm border-t dark:border-gray-700 py-4">
+    <div class="container flex flex-col md:flex-row justify-between text-sm border-t dark:border-gray-700 py-4">
         <div class="flex space-x-5">
             <a href="{{ route('terms') }}">Datenschutzerklärung</a>
             <a href="{{ route('impressum') }}">Impressum</a>
