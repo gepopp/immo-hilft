@@ -1,4 +1,4 @@
-<div class="text-white">
+<div class="pl-20 md:pl-0 text-white">
     <h2 class="text-white text-2xl md:text-4xl font-bold">
         @if(session('applocale') == 'uk')
             Ви можете запропонувати житло біженцям з України? Тоді зареєструйте його тут – ми зв’яжемося з вами:
