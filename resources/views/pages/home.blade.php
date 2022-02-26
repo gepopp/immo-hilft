@@ -70,7 +70,7 @@
         </div>
     </div>
     <div class="bg-flag-blue min-h-screen bg-left section-bg-left" style="background-image: url( {{ asset('images/wohnraum-bg.svg') }}); background-size: 33.33%; background-repeat: repeat-y;">
-        <div class="container py-24">
+        <div class="container py-24" id="apply">
             <div class="flex justify-end">
                 <div class="w-full md:w-1/2 flex justify-end md:justify-center items-center">
                     <div class="max-w-xl">
