@@ -13,7 +13,7 @@ html, body{
     }
 
     h1, h2, h3, h4, h5 {
-        @apply text-gray-800 dark:text-white font-semibold;
+        @apply text-gray-800 font-semibold;
     }
 
     h1 {
@@ -47,10 +47,6 @@ html, body{
             @apply list-disc;
         }
 
-    }
-
-    p {
-        @apply dark:text-white;
     }
 
     a {
