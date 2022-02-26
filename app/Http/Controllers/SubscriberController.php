@@ -8,6 +8,35 @@ use App\Http\Requests\UpdatesubscriberRequest;
 
 class SubscriberController extends Controller
 {
+
+    public function verify($id, $hash){
+
+        $subscription = subscriber::find($id);
+
+        if(!$subscription || sha1($subscription->email) !== $hash){
+
+            if($subscription){
+                $subscription->delete();
+            }
+
+
+            session()->flash('error', __('This Link is not valid anymore, your subscription has been deleted. Please signup again.'));
+            return view('newsletter.verify');
+
+        }
+
+
+        $subscription->markEmailAsVerified();
+
+        session()->flash('success', __('Thank you, you are now successfully subscribed.'));
+        return view('newsletter.verify');
+
+
+    }
+
+
+
+
     /**
      * Display a listing of the resource.
      *

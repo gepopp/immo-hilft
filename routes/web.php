@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
+
 Route::get('/', function () {
     return view('pages.comming-soon');
 });
@@ -25,3 +27,6 @@ Route::get('/impressum', function () { return view('pages.impressum'); })->name(
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
+Route::get('newsletter/verifiy/{id}/{hash}', [\App\Http\Controllers\SubscriberController::class, 'verify'])->name('newsletter.verify');

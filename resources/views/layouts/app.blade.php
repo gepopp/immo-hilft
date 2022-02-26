@@ -47,6 +47,7 @@
     <div class="container flex justify-between text-sm border-t dark:border-gray-700 py-4">
         <div class="flex space-x-5">
             <a href="{{ route('terms') }}">Datenschutzerklärung</a>
+            <a href="{{ route('impressum') }}">Impressum</a>
         </div>
     </div>
 </footer>
