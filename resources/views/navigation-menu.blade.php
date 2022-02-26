@@ -17,9 +17,6 @@
                 <a href="/lang/uk">
                     <img src="{{ asset('images/uk.svg') }}" class="w-12 h-auto"/>
                 </a>
-                <a href="/lang/en">
-                    <img src="{{ asset('images/en.svg') }}" class="w-12 h-auto"/>
-                </a>
             </div>
 
 
