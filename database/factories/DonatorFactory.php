@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class SpaceRegistrationFactory extends Factory
+class DonatorFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,7 +14,9 @@ class SpaceRegistrationFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name,
+            'link' => $this->faker->url,
+            'donation' => $this->faker->numberBetween($min = 1000, $max = 9000)
         ];
     }
 }

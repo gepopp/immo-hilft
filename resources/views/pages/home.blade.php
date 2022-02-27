@@ -52,15 +52,13 @@
 
                                 @if(session('applocale') == 'uk')
                                     <p class="font-medium md:font-semibold">
-                                        В ініціативі «Immo Hilft»
-                                        - Beacon Invest, Bondi Consult, EHL, goreeo, Hawlik Gerginski, Immobilien Redaktion, KE Wohnimmobilien, Webentwicklung Gerhard Popp, Kommunikation Unteregger, REMAX Austria und WISAG, Zeiger Immobilien Marketing -
-                                        саме цим ми і займаємося в галузі нерухомості. Ініціатори закликають надати тимчасово порожні квартири для біженців з України. Таким чином кожен може надати допомогу швидко і без бюрократії.
+                                        В ініціативі «Immo Hilft» - <x-initiators/> - саме цим ми і займаємося в галузі нерухомості. Ініціатори закликають надати тимчасово порожні квартири для біженців з України. Таким чином кожен може надати допомогу швидко і без бюрократії.
                                         <br>
                                         Якщо кожна велика компанія в Австрії вирішить надати ОДНУ квартиру, ми можемо запропонувати притулок до 5000 осіб. Ми звертаємося не тільки до компаній, ми також вдячні за будь-яку допомогу від приватних осіб. Давайте триматися разом і допомагати людям, які терміново потребують нашої допомоги прямо зараз!
                                     </p>
                                 @elseif(session('applocale') == 'en')
                                     <p class="font-medium md:font-semibold">
-                                        The initiators - Beacon Invest, Bondi Consult, EHL, goreeo, Hawlik Gerginski, Immobilien Redaktion, KE Wohnimmobilien, Webentwicklung Gerhard Popp, Kommunikation Unteregger, REMAX Austria and WISAG, Zeiger Immobilien Marketing are calling on people to provide temporary empty rooms in Austria for refugees from Ukraine.
+                                        The initiators - <x-initiators/> - are calling on people to provide temporary empty rooms in Austria for refugees from Ukraine.
                                     </p>
                                     <p class="font-medium md:font-semibold">
                                         In this way, everyone can help quickly and without bureaucracy. If every major real estate company in Austria decides to provide ONE flat, we can offer refuge to up to 5,000 people. However, we are not only appealing to companies, but are also grateful for any help from private individuals.
@@ -69,7 +67,7 @@
                                         Let's stand together and help people who urgently need our help right now!
                                     </p>
                                 @else
-                                    <p class="font-medium md:font-semibold">Die Initiatoren – Beacon Invest, Bondi Consult, EHL, goreeo, Hawlik Gerginski, Immobilien Redaktion, KE Wohnimmobilien, Webentwicklung Gerhard Popp, Kommunikation Unteregger, REMAX Austria und WISAG, Zeiger Immobilien Marketing rufen dazu auf, temporär leere Räume für geflüchtete Menschen aus der Ukraine zur Verfügung zu stellen.</p>
+                                    <p class="font-medium md:font-semibold">Die Initiatoren – <x-initiators/> - rufen dazu auf, temporär leere Räume für geflüchtete Menschen aus der Ukraine zur Verfügung zu stellen.</p>
                                     <p class="font-medium md:font-semibold">So kann jeder und jede rasch und ohne Bürokratie Hilfe leisten. Entscheidet sich jedes größere Immo-Unternehmen in Österreich dazu, EINE Wohnung bereitzustellen, bieten wir damit bis zu 5.000 Menschen eine Zuflucht. Wir appellieren aber nicht nur an Unternehmen, sondern sind auch für jede Hilfeleistung von Privatpersonen dankbar.</p>
                                     <p class="font-medium md:font-semibold">Halten wir zusammen und helfen wir Menschen, die unsere Hilfe gerade dringend benötigen!</p>
                                 @endif
@@ -129,6 +127,7 @@
                 @endif
             </div>
         </div>
+        <x-donators/>
     </div>
 
 

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Initiator extends Model
+class Donator extends Model
 {
     use HasFactory;
 
@@ -21,4 +21,4 @@ class Initiator extends Model
         });
     }
 
- }
+}
