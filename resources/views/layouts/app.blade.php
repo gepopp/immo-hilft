@@ -28,6 +28,7 @@
         gtag('config', 'G-3GG69ZBPML');
     </script>
     <link rel="stylesheet" type="text/css" href="{{asset("vendor/cookie-consent/css/cookie-consent.css")}}">
+    <script src="https://www.google.com/recaptcha/api.js?render={{ env('GOOGLE_RECAPTCHA_SITE_KEY') }}"></script>
 @livewireStyles
 
 <!-- Scripts -->

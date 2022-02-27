@@ -22,7 +22,7 @@
                                 @if(session('applocale') == 'uk')
                                     Іноді кризи здаються нескінченними - особливо в останні два роки і особливо в останні кілька днів. У такі часи особливо важливі дві речі: триматися РАЗОМ і ВЗЯТИ ВІДПОВІДАЛЬНІСТЬ.
                                 @else
-                                    Manchmal scheint es als, würden die Krisen kein Ende nehmen – gerade in den letzten zwei Jahre und besonders in den letzten paar Tagen. In solchen Zeiten sind zwei Dinge besonders wichtig: ZUSAMMENHALTEN und VERANTWORTUNG ÜBERNEHMEN. Mit der Initiative „Immo hilft“ machen wir aus der Immobilienwirtschaft genau das.
+                                    Manchmal scheint es, als würden die Krisen kein Ende nehmen – gerade in den letzten zwei Jahren und besonders in den letzten paar Tagen. In solchen Zeiten sind zwei Dinge besonders wichtig: ZUSAMMENHALTEN und VERANTWORTUNG ÜBERNEHMEN. Mit der Initiative „Immo hilft“ machen wir aus der Immobilienwirtschaft genau das.
                                 @endif
 
 
