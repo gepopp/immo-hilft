@@ -1,4 +1,5 @@
 <x-app-layout>
+    <div class="mt-48">&npsp;</div>
     <div class="container content">
         <h1>Impressum</h1>
 

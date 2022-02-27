@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use Livewire\Component;
 use App\Models\subscriber;
 use App\Models\SpaceRegistration;
+use Illuminate\Support\Facades\Http;
 use App\Notifications\VerifySpaceDonation;
 
 
@@ -123,6 +124,7 @@ class DonateSpaceForm extends Component {
         'description'    => 'string|required|min:30',
         'newsletter'     => 'nullable',
         'agb'            => 'accepted',
+        'captcha'        => 'required|string',
 
     ];
 
@@ -154,7 +156,21 @@ class DonateSpaceForm extends Component {
 
 
 
-    public function submit() {
+    public function submit( $token ) {
+
+
+        $captcha = Http::asForm()->post( 'https://www.google.com/recaptcha/api/siteverify', [
+            'secret'   => env( 'GOOGLE_RECAPTCHA_SECRET' ),
+            'response' => $token,
+        ] );
+
+        $valid = $captcha->collect()->toArray();
+
+        if(! $valid['success']){
+            $this->dispatchBrowserEvent( 'spamprotect' );
+            return;
+        }
+
 
         $this->validate();
 
@@ -175,8 +191,8 @@ class DonateSpaceForm extends Component {
         ] );
 
 
-        if($this->newsletter){
-            subscriber::firstOrCreate(['email' => $this->email], ['name' => $this->name]);
+        if ( $this->newsletter ) {
+            subscriber::firstOrCreate( [ 'email' => $this->email ], [ 'name' => $this->name ] );
         }
 
         $donation->save();
@@ -184,13 +200,10 @@ class DonateSpaceForm extends Component {
         $this->reset();
 
 
-        $donation->notify(new VerifySpaceDonation());
+        $donation->notify( new VerifySpaceDonation() );
 
 
-        $this->dispatchBrowserEvent('saved');
-
-
-
+        $this->dispatchBrowserEvent( 'saved' );
 
 
     }

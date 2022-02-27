@@ -2,11 +2,25 @@
     <h2 class="text-white text-2xl md:text-4xl font-bold">
         @if(session('applocale') == 'uk')
             Ви можете запропонувати житло біженцям з України? Тоді зареєструйте його тут – ми зв’яжемося з вами:
+        @elseif(session('applocale') == 'en')
+            You can offer a living space for refugees from Ukraine? Please register it here - we will contact you:
         @else
-            Sie können einen Wohnraum für geflüchtete Menschen aus der Ukraine anbieten? Dann registrieren Sie diesen bitte hier – wir melden uns bei Ihnen:
+            Sie können Wohnraum für geflüchtete Menschen aus der Ukraine anbieten? Dann registrieren Sie diesen bitte hier – wir melden uns bei Ihnen:
         @endif
     </h2>
-    <form wire:submit.prevent="submit">
+    <form
+          id="space-form"
+          x-data="{
+          setCaptcha(){
+           grecaptcha.ready(function () {
+                    grecaptcha.execute('{{env('GOOGLE_RECAPTCHA_SITE_KEY')}}', {action: 'submit'})
+                        .then(function (token) {
+                            $wire.submit(token)
+                        });
+                });
+            }
+          }"
+          @submit.prevent="setCaptcha()">
         <div class="mt-4">
             <x-jet-label for="name" class="text-white">{{ __('Name') }}</x-jet-label>
             <x-jet-input type="text" class="w-full text-gray-900" wire:model="name" required/>
@@ -74,7 +88,7 @@
             </div>
         </div>
         <div class="mt-4">
-            <x-jet-label for="description" class="text-white">{{ __('Description of linivng space') }}</x-jet-label>
+            <x-jet-label for="description" class="text-white">{{ __('Description of space') }}</x-jet-label>
             <textarea wire:model="description" class="w-full text-gray-900 p-3" rows="8" required></textarea>
             <x-jet-input-error class="bg-white bg-opacity-25 px-2" for="description"/>
         </div>
@@ -82,7 +96,7 @@
             <x-jet-label for="agb" class="text-white">
                 <x-jet-input type="checkbox" wire:model="agb"/>
                 {!!  __("I accept the :terms_of_service", [
-                   'terms_of_service' => '<a href="' . route('terms') . '" target="_blank" class="underline">Datenschutzerklärung</a>'
+                   'terms_of_service' => '<a href="' . route('terms') . '" target="_blank" class="underline">' . __('privacy policy') .'</a>'
                    ]) !!}
             </x-jet-label>
             <x-jet-input-error class="bg-white bg-opacity-25 px-2" for="agb"/>
@@ -93,6 +107,7 @@
                 {!!  __("Yes, keep me informed about IMMO HILFT via email.") !!}
             </x-jet-label>
         </div>
+
 
         <div
             x-data="{ show:false }"
@@ -105,7 +120,22 @@
         </div>
 
 
-        <button type="submit" class="mt-10 shadow-xl hover:shadow-lg focus:shadow-lg flex w-full justify-center bg-flag-yellow text-white font-bold text-xl py-3 flex items-center space-x-3">
+        <div
+            x-data="{ show:false }"
+            @spamprotect.window="show = true"
+            x-init=" $watch('show', (show) => setTimeout(show = false, 2000))"
+        >
+            <div x-show="show" x-cloak class="bg-red-300 bg-opacity-25 text-white p-5 text-center mg-4">
+                <p>{{__('Due to spam protection we could not process your request. Please reload the page and try again.')}}</p>
+            </div>
+        </div>
+
+
+
+        <button
+            type="submit"
+            class="g-recaptcha mt-10 shadow-xl hover:shadow-lg focus:shadow-lg flex w-full justify-center bg-flag-yellow text-white font-bold text-xl py-3 flex items-center space-x-3"
+        >
         <span wire:loading wire:target="submit">
             <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>

@@ -1,5 +1,7 @@
 <x-app-layout>
-    <div class="container content">
+    <div class="mt-48">&npsp;</div>
+
+    <div class="container content mt-36">
         <h1>Datenschutzerklärung</h1>
 
         <h4>Allgemeines</h4>

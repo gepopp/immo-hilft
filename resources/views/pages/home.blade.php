@@ -26,8 +26,6 @@
                                 @else
                                     Manchmal scheint es, als würden die Krisen kein Ende nehmen – gerade in den letzten zwei Jahren und besonders in den letzten paar Tagen. In solchen Zeiten sind zwei Dinge besonders wichtig: ZUSAMMENHALTEN und VERANTWORTUNG ÜBERNEHMEN. Mit der Initiative „Immo hilft“ machen wir aus der Immobilienwirtschaft genau das.
                                 @endif
-
-
                             </p>
 
 
@@ -102,7 +100,7 @@
                     @if(session('applocale') == 'uk')
                         <h1>Ми знаємо, що житлової площі обмаль. Крім того, ми також будемо вдячні, якщо ви можете зробити пожертву на рахунок Caritas:</h1>
                     @elseif(session('applocale') == 'en')
-                        Living space is a rare good, we know that. Alternatively we appreciate your donation with the subject IMMO HILFT to the account of our collaboration partner Caritas
+                        <h1>Living space is a rare good, we know that. Alternatively we appreciate your donation with the subject IMMO HILFT to the account of our collaboration partner Caritas</h1>
                     @else
                         <h1>Wohnraum ist knapp, wir wissen das. Wir sind Ihnen alternativ auch für eine Spende mit dem Betreff IMMO HILFT an das Konto unseres Partners, der Caritas dankbar:</h1>
                     @endif
@@ -121,6 +119,7 @@
                     <p>After you donated, you can send an Email to
                         <a href="mailto:spenden@immo-hilft.at">spenden@immo-hilft.at</a>, if you want to show up in our dontaors list.
                     </p>
+                    <p>Of course, you are also welcome to donate anonymously.</p>
                 @else
                     <p>Bitte geben Sie als Verwendungszweck "IMMO-HILFT" an.</p>
                     <p>Wenn Sie gespendet haben, schicken Sie bitte ein E-Mail an
