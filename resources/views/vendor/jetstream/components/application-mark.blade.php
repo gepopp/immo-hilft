@@ -1,1 +1,1 @@
-<img src="{{ asset('images/IMMohilft_Logo-schwarzrot.svg') }}" class="w-16 h-auto">
+<img src="{{ asset('images/IMMohilft_Logo-weißrot.svg') }}" class="w-14 h-auto">
