@@ -41,7 +41,7 @@
                             </div>
 
 
-                            <p class="font-medium md:font-semibold"
+                            <div class="font-medium md:font-semibold"
                                x-show="show > 3"
                                x-transition:enter="transition ease-out duration-300"
                                x-transition:enter-start="opacity-0 scale-90"
@@ -56,8 +56,8 @@
                                     Якщо кожна велика компанія в Австрії вирішить надати ОДНУ квартиру, ми можемо запропонувати притулок до 5000 осіб. Ми звертаємося не тільки до компаній, ми також вдячні за будь-яку допомогу від приватних осіб. Давайте триматися разом і допомагати людям, які терміново потребують нашої допомоги прямо зараз!
 
                                 @else
-                                <p>Die Initiatoren – Beacon Invest, Bondi Consult, EHL, goreeo, Hawlik Gerginski, Immobilien Redaktion, KE Wohnimmobilien, Kommunikation Unteregger, REMAX Austria und WISAG, Zeiger Immobilien Marketing rufen dazu auf, temporär leere Räume für geflüchtete Menschen aus der Ukraine zur Verfügung zu stellen.</p>
-                                <p>So kann jeder und jede rasch und ohne Bürokratie Hilfe leisten. Entscheidet sich jedes größere Immo-Unternehmen in Österreich dazu, EINE Wohnung bereitzustellen, bieten wir damit bis zu 5.000 Menschen eine Zuflucht. Wir appellieren aber nicht nur an Unternehmen, sondern sind auch für jede Hilfeleistung von Privatpersonen dankbar.</p>
+                                <p class="font-medium md:font-semibold">Die Initiatoren – Beacon Invest, Bondi Consult, EHL, goreeo, Hawlik Gerginski, Immobilien Redaktion, KE Wohnimmobilien, Kommunikation Unteregger, REMAX Austria und WISAG, Zeiger Immobilien Marketing rufen dazu auf, temporär leere Räume für geflüchtete Menschen aus der Ukraine zur Verfügung zu stellen.</p>
+                                <p class="font-medium md:font-semibold">So kann jeder und jede rasch und ohne Bürokratie Hilfe leisten. Entscheidet sich jedes größere Immo-Unternehmen in Österreich dazu, EINE Wohnung bereitzustellen, bieten wir damit bis zu 5.000 Menschen eine Zuflucht. Wir appellieren aber nicht nur an Unternehmen, sondern sind auch für jede Hilfeleistung von Privatpersonen dankbar.</p>
                                 <h4>Halten wir zusammen und helfen wir Menschen, die unsere Hilfe gerade dringend benötigen!</h4>
                                 @endif
                             </p>
