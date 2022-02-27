@@ -61,7 +61,6 @@
                                     <p class="font-medium md:font-semibold">So kann jeder und jede rasch und ohne Bürokratie Hilfe leisten. Entscheidet sich jedes größere Immo-Unternehmen in Österreich dazu, EINE Wohnung bereitzustellen, bieten wir damit bis zu 5.000 Menschen eine Zuflucht. Wir appellieren aber nicht nur an Unternehmen, sondern sind auch für jede Hilfeleistung von Privatpersonen dankbar.</p>
                                     <p class="font-medium md:font-semibold">Halten wir zusammen und helfen wir Menschen, die unsere Hilfe gerade dringend benötigen!</p>
                                     @endif
-                                    </p>
                             </div>
                             <a href="#apply" x-show="show > 4" class="mt-10 shadow-xl hover:shadow-lg focus:shadow-lg flex w-full justify-center bg-flag-blue text-white font-bold text-xl py-3">{{ __('contribute') }}</a>
                         </div>
@@ -100,7 +99,7 @@
                         BIC: GIBAATWWXXX<br>
                         IBAN: AT23 2011 1000 0123 4560
                     </address>
-                    <p>Bitte geben Sie als Verwendugszweck "IMMO-HILFT" an.</p>
+                    <p>Bitte geben Sie als Verwendungszweck "IMMO-HILFT" an.</p>
                 </div>
             </div>
         </div>
