@@ -11,6 +11,9 @@ class Initiators extends Component
     public $initiators;
 
 
+
+    public $text;
+
     /**
      * Create a new component instance.
      *
@@ -19,6 +22,24 @@ class Initiators extends Component
     public function __construct()
     {
         $this->initiators = Initiator::all();
+
+        $text = '';
+
+        foreach ( $this->initiators as $key => $initiator ) {
+            if($initiator->link){
+                $text .= '<a href="' . $initiator->link . '">';
+            }
+            $text .= $initiator->name;
+            if($initiator->link){
+                $text .= '</a>';
+            }
+            if( $key < (count($this->initiators) - 1)){
+                $text .= ', ';
+            }
+        }
+
+        $this->text = $text;
+
     }
 
     /**

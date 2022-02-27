@@ -1,1 +1,3 @@
-<span class="inline">@foreach($initiators as $key => $initiator)@if($initiator->link)<a href="{{ $initiator->link }}">@endif{{ $initiator->name }}@if($initiator->link)</a>@endif@if($key < (count($initiators)-1)),&nbsp;@endif @endforeach</span>
+<span class="inline">
+    {{ $text }}
+</span>
