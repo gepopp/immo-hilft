@@ -17,7 +17,7 @@
                 <th class="text-left">Adresse</th>
                 <th class="text-left">Fläche<br>Zimmer</th>
                 <th class="text-left">Verfügbar ab<br>bis</th>
-                <th class="text-left">Beschreibung</th>
+                <th class="text-left max-w-sm">Beschreibung</th>
             </tr>
             </thead>
             @foreach($spaces as $item)

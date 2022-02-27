@@ -27,7 +27,7 @@ class Initiators extends Component
 
         foreach ( $this->initiators as $key => $initiator ) {
             if($initiator->link){
-                $text .= '<a href="' . $initiator->link . '">';
+                $text .= '<a href="' . $initiator->link . '" target="_blank">';
             }
             $text .= $initiator->name;
             if($initiator->link){
