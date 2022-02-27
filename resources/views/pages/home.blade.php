@@ -21,6 +21,8 @@
 
                                 @if(session('applocale') == 'uk')
                                     Іноді кризи здаються нескінченними - особливо в останні два роки і особливо в останні кілька днів. У такі часи особливо важливі дві речі: триматися РАЗОМ і ВЗЯТИ ВІДПОВІДАЛЬНІСТЬ.
+                                @elseif(session('applocale') == 'en')
+                                    Sometimes it seems as if there is no end to the crises - in the last two years and especially in the last few days. In times like these, two things are extremely important: STAYING TOGETHER and TAKING RESPONSIBILITY. With the "Immo hilft" initiative, we in the real estate industry are doing just that.
                                 @else
                                     Manchmal scheint es, als würden die Krisen kein Ende nehmen – gerade in den letzten zwei Jahren und besonders in den letzten paar Tagen. In solchen Zeiten sind zwei Dinge besonders wichtig: ZUSAMMENHALTEN und VERANTWORTUNG ÜBERNEHMEN. Mit der Initiative „Immo hilft“ machen wir aus der Immobilienwirtschaft genau das.
                                 @endif
@@ -53,10 +55,20 @@
                                 @if(session('applocale') == 'uk')
                                     <p class="font-medium md:font-semibold">
                                         В ініціативі «Immo Hilft»
-                                        -  Beacon Invest, Bondi Consult, EHL, goreeo, Hawlik Gerginski, Immobilien Redaktion, KE Wohnimmobilien, Webentwicklung Gerhard Popp, Kommunikation Unteregger, REMAX Austria und WISAG, Zeiger Immobilien Marketing -
+                                        - Beacon Invest, Bondi Consult, EHL, goreeo, Hawlik Gerginski, Immobilien Redaktion, KE Wohnimmobilien, Webentwicklung Gerhard Popp, Kommunikation Unteregger, REMAX Austria und WISAG, Zeiger Immobilien Marketing -
                                         саме цим ми і займаємося в галузі нерухомості. Ініціатори закликають надати тимчасово порожні квартири для біженців з України. Таким чином кожен може надати допомогу швидко і без бюрократії.
                                         <br>
                                         Якщо кожна велика компанія в Австрії вирішить надати ОДНУ квартиру, ми можемо запропонувати притулок до 5000 осіб. Ми звертаємося не тільки до компаній, ми також вдячні за будь-яку допомогу від приватних осіб. Давайте триматися разом і допомагати людям, які терміново потребують нашої допомоги прямо зараз!
+                                    </p>
+                                @elseif(session('applocale') == 'en')
+                                    <p class="font-medium md:font-semibold">
+                                        The initiators - Beacon Invest, Bondi Consult, EHL, goreeo, Hawlik Gerginski, Immobilien Redaktion, KE Wohnimmobilien, Webentwicklung Gerhard Popp, Kommunikation Unteregger, REMAX Austria and WISAG, Zeiger Immobilien Marketing are calling on people to provide temporary empty rooms in Austria for refugees from Ukraine.
+                                    </p>
+                                    <p class="font-medium md:font-semibold">
+                                        In this way, everyone can help quickly and without bureaucracy. If every major real estate company in Austria decides to provide ONE flat, we can offer refuge to up to 5,000 people. However, we are not only appealing to companies, but are also grateful for any help from private individuals.
+                                    </p>
+                                    <p class="font-medium md:font-semibold">
+                                        Let's stand together and help people who urgently need our help right now!
                                     </p>
                                 @else
                                     <p class="font-medium md:font-semibold">Die Initiatoren – Beacon Invest, Bondi Consult, EHL, goreeo, Hawlik Gerginski, Immobilien Redaktion, KE Wohnimmobilien, Webentwicklung Gerhard Popp, Kommunikation Unteregger, REMAX Austria und WISAG, Zeiger Immobilien Marketing rufen dazu auf, temporär leere Räume für geflüchtete Menschen aus der Ukraine zur Verfügung zu stellen.</p>
@@ -89,8 +101,10 @@
                 <div class="max-w-xl">
                     @if(session('applocale') == 'uk')
                         <h1>Ми знаємо, що житлової площі обмаль. Крім того, ми також будемо вдячні, якщо ви можете зробити пожертву на рахунок Caritas:</h1>
+                    @elseif(session('applocale') == 'en')
+                        Living space is a rare good, we know that. Alternatively we appreciate your donation with the subject IMMO HILFT to the account of our collaboration partner Caritas
                     @else
-                        <h1>Wohnraum ist knapp, wir wissen das. Wir sind Ihnen alternativ auch für eine Spende mit dem Betreff IMMO HILFT an das Konto der Caritas dankbar:</h1>
+                        <h1>Wohnraum ist knapp, wir wissen das. Wir sind Ihnen alternativ auch für eine Spende mit dem Betreff IMMO HILFT an das Konto unseres Partners, der Caritas dankbar:</h1>
                     @endif
                 </div>
             </div>
@@ -101,9 +115,19 @@
                     BIC: GIBAATWWXXX<br>
                     IBAN: AT23 2011 1000 0123 4560
                 </address>
-                <p>Bitte geben Sie als Verwendungszweck "IMMO-HILFT" an.</p>
-                <p>Wenn Sie gespendet haben, schicken Sie bitte ein E-Mail an <a href="mailto:spenden@immo-hilft.at">spenden@immo-hilft.at</a>, damit wir Sie in unsere Spenderliste aufnehmen können.</p>
-                <p>Natürlich können Sie aber gerne auch anonym spenden.</p>
+                @if(session('applocale') == 'uk')
+                @elseif(session('applocale') == 'en')
+                    <p>Please use as "IMMO-HILFT" subject.</p>
+                    <p>After you donated, you can send an Email to
+                        <a href="mailto:spenden@immo-hilft.at">spenden@immo-hilft.at</a>, if you want to show up in our dontaors list.
+                    </p>
+                @else
+                    <p>Bitte geben Sie als Verwendungszweck "IMMO-HILFT" an.</p>
+                    <p>Wenn Sie gespendet haben, schicken Sie bitte ein E-Mail an
+                        <a href="mailto:spenden@immo-hilft.at">spenden@immo-hilft.at</a>, damit wir Sie in unsere Spenderliste aufnehmen können.
+                    </p>
+                    <p>Natürlich können Sie aber gerne auch anonym spenden.</p>
+                @endif
             </div>
         </div>
     </div>
