@@ -27,6 +27,12 @@
                 </div>
 
 
+
+                <div class="mt-20">
+                    @livewire('admin.supporter')
+                </div>
+
+
             </div>
         </div>
     </div>

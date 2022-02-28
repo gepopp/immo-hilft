@@ -4,15 +4,24 @@ namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
 use App\Models\Initiator;
+use Livewire\WithFileUploads;
 
 
 
 class Initiators extends Component
 {
 
+
+    use WithFileUploads;
+
+
     public $name;
 
+
     public $link;
+
+
+    public $photo;
 
 
     public $initiators;
