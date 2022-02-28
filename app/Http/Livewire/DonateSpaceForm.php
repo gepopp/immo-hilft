@@ -124,7 +124,6 @@ class DonateSpaceForm extends Component {
         'description'    => 'string|required|min:30',
         'newsletter'     => 'nullable',
         'agb'            => 'accepted',
-        'captcha'        => 'required|string',
 
     ];
 
