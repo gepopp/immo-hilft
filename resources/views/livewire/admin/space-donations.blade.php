@@ -1,7 +1,7 @@
 <div>
     <div class="content">
         <div class="flex justify-between">
-            <h1>Wohnraum</h1>
+            <h1>Wohnraum ( {{ $spaces->count() }} )</h1>
             @if(!$file)
                 <span wire:click="export" class="cursor-pointer">CSV erzeugen</span>
             @else
