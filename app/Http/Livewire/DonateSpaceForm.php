@@ -111,7 +111,7 @@ class DonateSpaceForm extends Component {
 
         'name'           => 'string|required|max:255',
         'email'          => 'email|required',
-        'company'        => 'string|required|max:255',
+        'company'        => 'string|nullable|max:255',
         'phone'          => 'string|required|max:255',
         'address'        => 'string|required|max:255',
         'zip'            => 'string|required|max:255',
