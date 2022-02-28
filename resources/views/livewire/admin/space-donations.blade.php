@@ -18,6 +18,7 @@
                 <th class="text-left">Fläche<br>Zimmer</th>
                 <th class="text-left">Verfügbar ab<br>bis</th>
                 <th class="text-left w-60">Beschreibung</th>
+                <th class="text-left">Validiert</th>
             </tr>
             </thead>
             @foreach($spaces as $item)
@@ -47,6 +48,13 @@
                     </td>
                     <td>
                         {{ $item->description }}
+                    </td>
+                    <td>
+                        @if($item->email_verified_at)
+                            {{ \Carbon\Carbon::parse($item->email_verified_at)->format('d.m. H:i') }}
+                        @else
+                            <span class="text-red-600">Nein</span>
+                        @endif
                     </td>
                 </tr>
             @endforeach
