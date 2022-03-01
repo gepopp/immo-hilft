@@ -44,6 +44,8 @@
     <meta property="og:type"               content="website" />
     <meta property="og:title" content="Immo Hilft - ZUSAMMENHALTEN und VERANTWORTUNG ÜBERNEHMEN" />
     <meta property="og:image" content="{{ asset('images/og_banner.png') }}" />
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
     <meta property="og:description" content="Mit der Initiative „Immo hilft“ machen wir aus der Immobilienwirtschaft genau das.
 " />
 @livewireStyles
