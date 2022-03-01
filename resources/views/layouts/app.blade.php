@@ -39,11 +39,11 @@
     </script>
     <link rel="stylesheet" type="text/css" href="{{asset("vendor/cookie-consent/css/cookie-consent.css")}}">
     <script src="https://www.google.com/recaptcha/api.js?render={{ env('GOOGLE_RECAPTCHA_SITE_KEY') }}"></script>
+
+    <meta property="og:url"                content="{{ env('APP_URL') }}" />
+    <meta property="og:type"               content="website" />
     <meta property="og:title" content="Immo Hilft - ZUSAMMENHALTEN und VERANTWORTUNG ÜBERNEHMEN" />
     <meta property="og:image" content="{{ asset('images/og_banner.png') }}" />
-    <meta property="og:locale" content="de_DE" />
-    <meta property="og:locale:alternate" content="uk_UK" />
-    <meta property="og:locale:alternate" content="en_EN" />
     <meta property="og:description" content="Mit der Initiative „Immo hilft“ machen wir aus der Immobilienwirtschaft genau das.
 " />
 @livewireStyles
