@@ -21,10 +21,14 @@ class SpaceDonations extends Component {
 
 
 
+    public $sqm;
+
+
 
     public function mount() {
 
         $this->spaces = SpaceRegistration::all();
+
     }
 
 

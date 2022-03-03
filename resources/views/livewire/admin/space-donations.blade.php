@@ -27,6 +27,9 @@
                         {{ $item->name }}
                         <br>
                         <a href="mailto:{{ $item->mail }}">{{ $item->email }}</a>
+                        <br>
+                        <a href="tel:{{ $item->mail }}">{{ $item->phone }}</a>
+
                     </td>
                     <td>{{ $item->company }}</td>
                     <td>
@@ -46,7 +49,7 @@
                         <br>
                         {{ $item->available_to }}
                     </td>
-                    <td>
+                    <td class="w-60">
                         {{ $item->description }}
                     </td>
                     <td>
