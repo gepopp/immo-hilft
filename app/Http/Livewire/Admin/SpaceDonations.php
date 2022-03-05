@@ -49,7 +49,7 @@ class SpaceDonations extends Component {
 // write each row at a time to a file
         foreach ( $this->spaces->toArray() as $row ) {
             $row = array_map("utf8_decode", $row);
-            fputcsv( $f, $row );
+            fputcsv( $f, $row, ';' );
         }
 
         fclose($f);
