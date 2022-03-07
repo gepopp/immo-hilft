@@ -79,38 +79,33 @@
                                     <p class="font-medium md:font-semibold">Halten wir zusammen und helfen wir Menschen, die unsere Hilfe gerade dringend benötigen!</p>
                                 @endif
                             </div>
+
+
+                            <div class="font-medium md:font-semibold"
+                                 x-show="show > 4" x-cloak
+                                 x-transition:enter="transition ease-out duration-300"
+                                 x-transition:enter-start="opacity-0 scale-90"
+                                 x-transition:enter-end="opacity-100 scale-100"
+                                 x-transition:leave="transition ease-in duration-300"
+                                 x-transition:leave-start="opacity-100 scale-100"
+                                 x-transition:leave-end="opacity-0 scale-90">
+
+                                @if(session('applocale') == 'uk')
+                                    <p class="font-medium md:font-semibold">
+                                        «гаряча лінія» для всіх осіб які втікли з України внаслідок війни за номером 0043 1 – 2676 870 9460.
+                                    </p>
+                                @elseif(session('applocale') == 'en')
+                                    <p class="font-medium md:font-semibold">
+                                        The hotline for people displaced by war from Ukraine can be reached at 0043 1 - 2676 870 9460.
+                                    </p>
+                                @else
+                                    <p class="font-medium md:font-semibold">
+                                        Die Hotline für kriegsvertriebene Menschen aus der Ukraine ist unter der Telefonnummer 0043 1 – 2676 870 9460 erreichbar.
+                                    </p>
+                                @endif
+                            </div>
+
                             <a href="#apply" x-show="show > 4" class="mt-10 shadow-xl hover:shadow-lg focus:shadow-lg flex w-full justify-center bg-flag-blue text-white font-bold text-xl py-3">{{ __('contribute') }}</a>
-
-
-{{--                            <div class="font-medium md:font-semibold mt-20"--}}
-{{--                                 x-show="show > 4" x-cloak--}}
-{{--                                 x-transition:enter="transition ease-out duration-300"--}}
-{{--                                 x-transition:enter-start="opacity-0 scale-90"--}}
-{{--                                 x-transition:enter-end="opacity-100 scale-100"--}}
-{{--                                 x-transition:leave="transition ease-in duration-300"--}}
-{{--                                 x-transition:leave-start="opacity-100 scale-100"--}}
-{{--                                 x-transition:leave-end="opacity-0 scale-90">--}}
-
-{{--                                @if(session('applocale') == 'uk')--}}
-{{--                                    <p class="font-medium md:font-semibold">--}}
-{{--                                        Українці, які шукають допомоги щодо житла, звертайтеся будь - ласка до «P7», закладу Карітасу:--}}
-{{--                                    </p>--}}
-{{--                                @elseif(session('applocale') == 'en')--}}
-{{--                                    <p class="font-medium md:font-semibold">--}}
-{{--                                        Ukrainian people seeking help should contact "P7", a Caritas facility, for housing:--}}
-{{--                                    </p>--}}
-{{--                                @else--}}
-{{--                                    <p class="font-medium md:font-semibold">--}}
-{{--                                        Ukrainische Hilfesuchende wenden sich für Wohnraum bitte an "P7", eine Einrichtung der Caritas:--}}
-{{--                                    </p>--}}
-{{--                                @endif--}}
-{{--                                    <address class="font-medium md:font-semibold" x-cloak>--}}
-{{--                                        <a href="tel:+4318923389" class="font-medium md:font-semibold">01-892 33 89</a><br>--}}
-{{--                                        <a href="mailto:p7@caritas-wien.at" class="font-medium md:font-semibold">p7@caritas-wien.at</a><br>--}}
-{{--                                        <a href="https://www.caritas-wien.at" class="font-medium md:font-semibold">www.caritas-wien.at</a>--}}
-{{--                                    </address>--}}
-{{--                            </div>--}}
-
 
                         </div>
                     </div>
