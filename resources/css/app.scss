@@ -37,7 +37,7 @@ html, body{
     }
 
     address {
-        @apply font-medium italic;
+        @apply font-medium md:font-semibold italic;
     }
 
     ul {
