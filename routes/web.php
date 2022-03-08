@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Route::get('help-info', function () {
     return view('pages.help-info');
-});
+})->name('pages.help-info');
 
 Route::get('/home', function (){
 

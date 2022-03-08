@@ -4,12 +4,26 @@
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
+                <div class="shrink-0 flex items-center w-12">
                     <a href="{{ route('home') }}">
                         <x-jet-application-mark class="block h-8 w-auto"/>
                     </a>
                 </div>
             </div>
+
+            <div class="flex items-center text-white text-center">
+                <a href="{{ route('pages.help-info') }}">
+                    @if(session('applocale') == 'uk')
+                        Інформація для шукачі допомоги
+                    @elseif(session('applocale') == 'en')
+                        Information for persons seeking help
+                    @else
+                        Infromationen für Hilfesuchende
+                    @endif
+                </a>
+            </div>
+
+
             <div class="flex items-center space-x-5">
                 <a href="/lang/de">
                     <img src="{{ asset('images/at.svg') }}" class="w-12 h-auto"/>
