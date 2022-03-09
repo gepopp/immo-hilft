@@ -18,7 +18,7 @@
                     @elseif(session('applocale') == 'en')
                         Information for persons seeking help
                     @else
-                        Infromationen für Hilfesuchende
+                        Informationen für Hilfesuchende
                     @endif
                 </a>
             </div>
