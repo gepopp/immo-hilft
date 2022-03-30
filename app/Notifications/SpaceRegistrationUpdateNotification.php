@@ -77,7 +77,7 @@ class SpaceRegistrationUpdateNotification extends Notification {
                     . ' bis '
                     . Carbon::parse( $notifiable->available_to )->format( 'd.m.Y' )
             )
-            ->line( 'Um eine reibungslose Vermittlung gewährleisten zu können, bitten wir Sie uns bekannt zu geben falls sich diese Daten geändert haben.' )
+            ->line( 'Um eine reibungslose Vermittlung gewährleisten zu können, bitten wir Sie uns bekannt zu geben falls sich am Status der Verfügbarkeit oder an anderen Daten etwas geändert hat.' )
             ->action( 'Änderung bekanntgeben', $link )
             ->line( 'Vielen Dank für Ihre Unterstützung!' );
     }
