@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
 use App\Models\SpaceRegistration;
+use App\Notifications\SpaceRegistrationUpdateNotification;
 
 
 
@@ -17,7 +18,17 @@ class SpaceDonations extends Component {
 
 
 
+
+
+    public $deleted;
+
+
+
+
+
     public $file;
+
+
 
 
 
@@ -25,9 +36,13 @@ class SpaceDonations extends Component {
 
 
 
+
+
     public function mount() {
 
         $this->spaces = SpaceRegistration::all();
+        $this->deleted = SpaceRegistration::onlyTrashed()->get();
+
 
     }
 
@@ -40,7 +55,7 @@ class SpaceDonations extends Component {
         $filename = 'spaces.csv';
 
 // open csv file for writing
-        $f = fopen( storage_path('app/public/' . $filename), 'w' );
+        $f = fopen( storage_path( 'app/public/' . $filename ), 'w' );
 
         if ( $f === false ) {
             die( 'Error opening the file ' . $filename );
@@ -48,15 +63,26 @@ class SpaceDonations extends Component {
 
 // write each row at a time to a file
         foreach ( $this->spaces->toArray() as $row ) {
-            $row = array_map("utf8_decode", $row);
+            $row = array_map( "utf8_decode", $row );
             fputcsv( $f, $row, ';' );
         }
 
-        fclose($f);
+        fclose( $f );
 
 
-        $this->file = \Storage::url('spaces.csv');
+        $this->file = \Storage::url( 'spaces.csv' );
 
+
+    }
+
+
+
+
+
+    public function sendUpdateNotification( SpaceRegistration $space_registration ) {
+
+        $space_registration->notify( new SpaceRegistrationUpdateNotification );
+        $this->emit( 'sent', [ 'id' => $space_registration->id ] );
 
     }
 

@@ -42,3 +42,14 @@ Route::get('newsletter/verifiy/{id}/{hash}', [\App\Http\Controllers\SubscriberCo
 Route::get('space/verifiy/{id}/{hash}', [\App\Http\Controllers\SpaceRegistrationController::class, 'verify'])
     ->middleware('signed')
     ->name('space.verify');
+
+
+Route::get('update/space/{space_registration}/{email}', function( \App\Models\SpaceRegistration $space_registration, $email, \Illuminate\Http\Request $request){
+
+    if($email != sha1($space_registration->email)){
+        redirect(\route('home'));
+    }
+
+    return view('update-space', ['space' => $space_registration]);
+
+})->middleware('signed')->name('space.update');

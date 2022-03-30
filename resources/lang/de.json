@@ -738,5 +738,6 @@
     "Phone": "Telefonnummer",
     "Thank you, your space was submitted successfully." : "Vielen Dank. Ihr Wohnraum wurde erfolgreich eingereicht.",
     "Due to spam protection we could not process your request. Please reload the page and try again." : "Zum Schutz vor Spam konnten wir diese Anfrage nicht verarbeiten. Bitte laden Sie die Seite neu und versuchen Sie es noch einmal.",
-    "Please verify your Email address with a click on the button below. Without this verification we cannot process your data.": "Bitte klicken Sie auf die Schaltfläche, um Ihre E-Mail-Adresse zu bestätigen. Ohne diese Bestätigung dürfen wir Ihre Daten nicht weiter verarbeiten und können nicht helfen!"
+    "Please verify your Email address with a click on the button below. Without this verification we cannot process your data.": "Bitte klicken Sie auf die Schaltfläche, um Ihre E-Mail-Adresse zu bestätigen. Ohne diese Bestätigung dürfen wir Ihre Daten nicht weiter verarbeiten und können nicht helfen!",
+    "Address of the living space": "Adresse des Wohnraums"
 }
