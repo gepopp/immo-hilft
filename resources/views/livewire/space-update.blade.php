@@ -32,6 +32,29 @@
                 <x-jet-input-error class="bg-white bg-opacity-25 px-2" for="city"/>
             </div>
         </div>
+        <div>
+            <div class="col-span-6 md:col-span-3 mt-4">
+                <x-jet-label for="furnitured" class="">
+                    <x-jet-input type="checkbox" class="text-flag-blue" wire:model="furnitured" />
+                    {{ __('The available space is furnitured.') }}
+                </x-jet-label>
+                <x-jet-input-error class="bg-white bg-opacity-25 px-2" for="furnitured"/>
+            </div>
+            <div class="col-span-6 md:col-span-3 mt-4">
+                <x-jet-label for="freerent" class="">
+                    <x-jet-input type="checkbox" class="text-flag-blue" wire:model="freerent" />
+                    {{ __('The rent of the space is freeexclusiv.') }}
+                </x-jet-label>
+                <x-jet-input-error class="bg-white bg-opacity-25 px-2" for="freerent"/>
+            </div>
+            <div class="col-span-6 md:col-span-3 mt-4">
+                <x-jet-label for="exclusive" class="">
+                    <x-jet-input type="checkbox" class="text-gflag-blue" wire:model="exclusive" />
+                    {{ __('The space is exclusively registered on immo-hilft.') }}
+                </x-jet-label>
+                <x-jet-input-error class="bg-white bg-opacity-25 px-2" for="exclusive"/>
+            </div>
+        </div>
         <div class="grid grid-cols-6 gap-3">
             <div class="col-span-3 mt-4">
                 <x-jet-label for="available_from">{{ __('Available from') }}</x-jet-label>

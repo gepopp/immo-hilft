@@ -54,7 +54,30 @@ class SpaceUpdate extends Component {
     public $available_to;
 
 
+
+
+
+    public $furnitured = false;
+
+
+
+
+
+    public $freerent = false;
+
+
+
+
+
+    public $exclusive = false;
+
+
+
+
+
     public $agb;
+
+
 
 
 
@@ -66,8 +89,14 @@ class SpaceUpdate extends Component {
         $this->city               = $space->city;
         $this->available_from     = $space->available_from;
         $this->available_to       = $space->available_to;
+        $this->furnitured         = $space->furnitured;
+        $this->freerent           = $space->freerent;
+        $this->exclusive          = $space->exclusiv;
 
     }
+
+
+
 
 
     protected $rules = [
@@ -75,13 +104,19 @@ class SpaceUpdate extends Component {
         'zip'            => 'string|required|max:255',
         'city'           => 'string|required|max:255',
         'available_from' => 'date',
-        'available_to'   => 'date',
+        'available_to'   => 'date|nullable',
         'agb'            => 'accepted',
+        'freerent'       => 'boolean|nullable',
+        'furnitured'     => 'boolean|nullable',
+        'exclusive'      => 'boolean|nullable',
 
     ];
 
 
-    public function submit($token){
+
+
+
+    public function submit( $token ) {
 
         $captcha = Http::asForm()->post( 'https://www.google.com/recaptcha/api/siteverify', [
             'secret'   => env( 'GOOGLE_RECAPTCHA_SECRET' ),
@@ -90,8 +125,9 @@ class SpaceUpdate extends Component {
 
         $valid = $captcha->collect()->toArray();
 
-        if(! $valid['success']){
+        if ( ! $valid['success'] ) {
             $this->dispatchBrowserEvent( 'spamprotect' );
+
             return;
         }
 
@@ -99,24 +135,35 @@ class SpaceUpdate extends Component {
         $this->validate();
 
 
-        $this->space_registration->update([
+
+        $this->space_registration->update( [
             'address'        => $this->address,
             'zip'            => $this->zip,
             'city'           => $this->city,
+            'furnitured'     => $this->furnitured,
+            'freerent'       => $this->freerent,
+            'exclusiv'       => $this->exclusive,
             'available_from' => Carbon::parse( $this->available_from )->toDateTimeString(),
             'available_to'   => $this->available_to != null ? Carbon::parse( $this->available_to )->toDateTimeString() : null,
-        ]);
+        ] );
 
 
-        $this->dispatchBrowserEvent('saved');
+        $this->dispatchBrowserEvent( 'saved' );
     }
 
 
-    public function delete(){
+
+
+
+    public function delete() {
+
         $this->space_registration->delete();
-        $this->dispatchBrowserEvent('saved');
+        $this->dispatchBrowserEvent( 'saved' );
         $this->reset();
     }
+
+
+
 
 
     public function render() {
