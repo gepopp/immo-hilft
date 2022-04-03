@@ -12,10 +12,12 @@
         <table class="text-sm w-full">
             <thead>
             <tr>
+                <th class="text-left">Erstellt<br>Update</th>
                 <th class="text-left">Name<br>Email</th>
                 <th class="text-left">Firma</th>
                 <th class="text-left">Adresse</th>
                 <th class="text-left">Fläche<br>Zimmer</th>
+                <th class="text-left">Details</th>
                 <th class="text-left">Verfügbar ab<br>bis</th>
                 <th class="text-left w-60">Beschreibung</th>
                 <th class="text-left">Validiert</th>
@@ -24,6 +26,10 @@
             </thead>
             @foreach($spaces as $item)
                 <tr class="border-b">
+                    <td>
+                        {{ $item->created_at->format('d.m.y') }}<br>
+                        {{ $item->updated_at->format('d.m.y') }}
+                    </td>
                     <td>
                         {{ $item->name }}
                         <br>
@@ -46,11 +52,49 @@
                         {{ $item->rooms }}
                     </td>
                     <td>
+                        <div class="flex space-x-5 items-center">
+                            @if($item->furnitured)
+                                <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            @else
+                                <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            @endif
+                            Möbliert
+                        </div>
+                        <div class="flex space-x-5 items-center">
+                            @if($item->freerent)
+                                <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            @else
+                                <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            @endif
+                            kostnelos
+                        </div>
+                        <div class="flex space-x-5 items-center">
+                            @if($item->exclusiv)
+                                <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            @else
+                                <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            @endif
+                            nur auf immo-hilft
+                        </div>
+                    </td>
+                    <td>
                         {{ $item->available_from }}
                         <br>
                         {{ $item->available_to }}
                     </td>
-                    <td class="w-60">
+                    <td class="line-clamp-1 hover:line-clamp-none px-2" width="100" style="max-width: 200px; overflow: hidden">
                         {{ $item->description }}
                     </td>
                     <td>
