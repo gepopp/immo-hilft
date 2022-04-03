@@ -77,6 +77,24 @@ class DonateSpaceForm extends Component {
 
 
 
+    public $furnitured = false;
+
+
+
+
+
+    public $freerent = false;
+
+
+
+
+
+    public $exclusive = false;
+
+
+
+
+
     public $available_from;
 
 
@@ -124,6 +142,9 @@ class DonateSpaceForm extends Component {
         'description'    => 'string|required|min:30',
         'newsletter'     => 'nullable',
         'agb'            => 'accepted',
+        'furnitured'     => 'boolean|nullable',
+        'freerent'       => 'boolean|nullable',
+        'exclusive'      => 'boolean|nullable',
 
     ];
 
@@ -165,8 +186,9 @@ class DonateSpaceForm extends Component {
 
         $valid = $captcha->collect()->toArray();
 
-        if(! $valid['success']){
+        if ( ! $valid['success'] ) {
             $this->dispatchBrowserEvent( 'spamprotect' );
+
             return;
         }
 
@@ -187,6 +209,9 @@ class DonateSpaceForm extends Component {
             'available_from' => Carbon::parse( $this->available_from )->toDateTimeString(),
             'available_to'   => $this->available_to != null ? Carbon::parse( $this->available_to )->toDateTimeString() : null,
             'description'    => $this->description,
+            'furnitured'     => $this->furnitured,
+            'freerent'       => $this->freerent,
+            'exclusiv'      => $this->exclusive,
         ] );
 
 
