@@ -40,7 +40,7 @@ class SpaceDonations extends Component {
 
     public function mount() {
 
-        $this->spaces = SpaceRegistration::all();
+        $this->spaces  = SpaceRegistration::all();
         $this->deleted = SpaceRegistration::onlyTrashed()->get();
 
 
@@ -62,30 +62,32 @@ class SpaceDonations extends Component {
         }
 
         $headers = [
-          'id',
-          'name',
-          'email',
-          'company',
-          'phone',
-          'address',
-          'zip',
-          'city',
-          'country',
-          'sqm',
-          'rooms',
-          'exklusiv',
-          'freerent',
-          'furnitured',
-          'available_from',
-          'available_to',
-          'descritpion',
-          'deleted_at',
-          'created_at',
-          'updated_at'
+            'id',
+            'name',
+            'email',
+            'company',
+            'phone',
+            'address',
+            'zip',
+            'city',
+            'country',
+            'sqm',
+            'rooms',
+            'exklusiv',
+            'freerent',
+            'furnitured',
+            'available_from',
+            'available_to',
+            'descritpion',
+            'deleted_at',
+            'created_at',
+            'updated_at',
         ];
+        $values  = $this->spaces->toArray();
+        array_unshift( $values, $headers );
 
 // write each row at a time to a file
-        foreach ( array_merge($headers, $this->spaces->toArray()) as $row ) {
+        foreach ( $values as $row ) {
             $row = array_map( "utf8_decode", $row );
             fputcsv( $f, $row, ';' );
         }
