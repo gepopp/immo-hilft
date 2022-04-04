@@ -15,6 +15,18 @@
             }
           }"
         @submit.prevent="setCaptcha()">
+
+        <div class="mt-4">
+            <p>Wurden Sie bezüglich dieses Wohnraums bereits von einer unserer Partnerorganisationen wie z.B. der Caritas kontaktiert?</p>
+            <select name="requested" wire:model="requested" class="w-full">
+                <option value="">Bitte wählen..</option>
+                <option value="0">Nein</option>
+                <option value="1">Ja</option>
+            </select>
+            <x-jet-input-error class="bg-white bg-opacity-25 px-2" for="requested"/>
+        </div>
+
+
         <div class="mt-4">
             <x-jet-label for="address">{{ __('Address of the living space') }}</x-jet-label>
             <x-jet-input type="text" class="w-full text-gray-900" wire:model="address" required/>
@@ -55,6 +67,7 @@
                 <x-jet-input-error class="bg-white bg-opacity-25 px-2" for="exclusive"/>
             </div>
         </div>
+
         <div class="grid grid-cols-6 gap-3">
             <div class="col-span-3 mt-4">
                 <x-jet-label for="available_from">{{ __('Available from') }}</x-jet-label>

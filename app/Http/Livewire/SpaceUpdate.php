@@ -75,6 +75,12 @@ class SpaceUpdate extends Component {
 
 
 
+    public $requested;
+
+
+
+
+
     public $agb;
 
 
@@ -109,11 +115,18 @@ class SpaceUpdate extends Component {
         'freerent'       => 'boolean|nullable',
         'furnitured'     => 'boolean|nullable',
         'exclusive'      => 'boolean|nullable',
+        'requested'      => 'boolean|required',
 
     ];
 
 
+    protected function messages() {
 
+        return [
+            'requested.boolean'  => __( 'Select' ),
+            'requested.required' => __( 'Select' ),
+        ];
+    }
 
 
     public function submit( $token ) {
@@ -135,7 +148,6 @@ class SpaceUpdate extends Component {
         $this->validate();
 
 
-
         $this->space_registration->update( [
             'address'        => $this->address,
             'zip'            => $this->zip,
@@ -143,6 +155,7 @@ class SpaceUpdate extends Component {
             'furnitured'     => $this->furnitured,
             'freerent'       => $this->freerent,
             'exclusiv'       => $this->exclusive,
+            'requested'      => $this->requested,
             'available_from' => Carbon::parse( $this->available_from )->toDateTimeString(),
             'available_to'   => $this->available_to != null ? Carbon::parse( $this->available_to )->toDateTimeString() : null,
         ] );

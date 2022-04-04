@@ -76,6 +76,7 @@ class SpaceDonations extends Component {
             'exklusiv',
             'freerent',
             'furnitured',
+            'requested',
             'available_from',
             'available_to',
             'descritpion',
