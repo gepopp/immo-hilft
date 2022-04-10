@@ -84,7 +84,7 @@ class SpaceDonations extends Component {
             'created_at',
             'updated_at',
         ];
-        $values  = $this->spaces->toArray();
+        $values  = SpaceRegistration::withTrashed()->get()->toArray();
         array_unshift( $values, $headers );
 
 // write each row at a time to a file
