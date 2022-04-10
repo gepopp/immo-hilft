@@ -80,6 +80,7 @@ class SpaceDonations extends Component {
             'available_from',
             'available_to',
             'descritpion',
+            'email_verified_at',
             'deleted_at',
             'created_at',
             'updated_at',
