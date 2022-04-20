@@ -81,29 +81,29 @@
                             </div>
 
 
-                            <div class="font-medium md:font-semibold"
-                                 x-show="show > 4" x-cloak
-                                 x-transition:enter="transition ease-out duration-300"
-                                 x-transition:enter-start="opacity-0 scale-90"
-                                 x-transition:enter-end="opacity-100 scale-100"
-                                 x-transition:leave="transition ease-in duration-300"
-                                 x-transition:leave-start="opacity-100 scale-100"
-                                 x-transition:leave-end="opacity-0 scale-90">
+{{--                            <div class="font-medium md:font-semibold"--}}
+{{--                                 x-show="show > 4" x-cloak--}}
+{{--                                 x-transition:enter="transition ease-out duration-300"--}}
+{{--                                 x-transition:enter-start="opacity-0 scale-90"--}}
+{{--                                 x-transition:enter-end="opacity-100 scale-100"--}}
+{{--                                 x-transition:leave="transition ease-in duration-300"--}}
+{{--                                 x-transition:leave-start="opacity-100 scale-100"--}}
+{{--                                 x-transition:leave-end="opacity-0 scale-90">--}}
 
-                                @if(session('applocale') == 'uk')
-                                    <p class="font-medium md:font-semibold">
-                                        «гаряча лінія» для всіх осіб які втікли з України внаслідок війни за номером 0043 1 – 2676 870 9460.
-                                    </p>
-                                @elseif(session('applocale') == 'en')
-                                    <p class="font-medium md:font-semibold">
-                                        The hotline for people displaced by war from Ukraine can be reached at 0043 1 - 2676 870 9460.
-                                    </p>
-                                @else
-                                    <p class="font-medium md:font-semibold">
-                                        Die Hotline für kriegsvertriebene Menschen aus der Ukraine ist unter der Telefonnummer 0043 1 – 2676 870 9460 erreichbar.
-                                    </p>
-                                @endif
-                            </div>
+{{--                                @if(session('applocale') == 'uk')--}}
+{{--                                    <p class="font-medium md:font-semibold">--}}
+{{--                                        «гаряча лінія» для всіх осіб які втікли з України внаслідок війни за номером 0043 1 – 2676 870 9460.--}}
+{{--                                    </p>--}}
+{{--                                @elseif(session('applocale') == 'en')--}}
+{{--                                    <p class="font-medium md:font-semibold">--}}
+{{--                                        The hotline for people displaced by war from Ukraine can be reached at 0043 1 - 2676 870 9460.--}}
+{{--                                    </p>--}}
+{{--                                @else--}}
+{{--                                    <p class="font-medium md:font-semibold">--}}
+{{--                                        Die Hotline für kriegsvertriebene Menschen aus der Ukraine ist unter der Telefonnummer 0043 1 – 2676 870 9460 erreichbar.--}}
+{{--                                    </p>--}}
+{{--                                @endif--}}
+{{--                            </div>--}}
 
                             <a href="#apply" x-show="show > 4" class="mt-10 shadow-xl hover:shadow-lg focus:shadow-lg flex w-full justify-center bg-flag-blue text-white font-bold text-xl py-3">{{ __('contribute') }}</a>
 
