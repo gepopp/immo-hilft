@@ -10,23 +10,30 @@
                 <div class="w-full md:w-1/2 flex justify-start md:justify-center items-center">
                     <div class="max-w-xl">
                         <div class="content">
-                            <p x-show="show > 1"
-                               x-transition:enter="transition ease-out duration-300"
-                               x-transition:enter-start="opacity-0 scale-90"
-                               x-transition:enter-end="opacity-100 scale-100"
-                               x-transition:leave="transition ease-in duration-300"
-                               x-transition:leave-start="opacity-100 scale-100"
-                               x-transition:leave-end="opacity-0 scale-90"
-                               class="font-medium md:font-semibold">
+                            <div x-show="show > 1"
+                                 x-transition:enter="transition ease-out duration-300"
+                                 x-transition:enter-start="opacity-0 scale-90"
+                                 x-transition:enter-end="opacity-100 scale-100"
+                                 x-transition:leave="transition ease-in duration-300"
+                                 x-transition:leave-start="opacity-100 scale-100"
+                                 x-transition:leave-end="opacity-0 scale-90"
+                                 class="font-medium md:font-semibold">
 
                                 @if(session('applocale') == 'uk')
-                                    Іноді кризи здаються нескінченними - особливо в останні два роки і особливо в останні кілька днів. У такі часи особливо важливі дві речі: триматися РАЗОМ і ВЗЯТИ ВІДПОВІДАЛЬНІСТЬ.
+                                    Іноді кризи здаються нескінченними - особливо в останні два роки і особливо в
+                                    останні кілька днів. У такі часи особливо важливі дві речі: триматися РАЗОМ і ВЗЯТИ
+                                    ВІДПОВІДАЛЬНІСТЬ.
                                 @elseif(session('applocale') == 'en')
-                                    Sometimes it seems as if there is no end to the crises - in the last two years and especially in the last few days. In times like these, two things are extremely important: STAYING TOGETHER and TAKING RESPONSIBILITY. With the "Immo hilft" initiative, we in the real estate industry are doing just that.
+                                    Sometimes it seems as if there is no end to the crises - in the last two years and
+                                    especially in the last few days. In times like these, two things are extremely
+                                    important: STAYING TOGETHER and TAKING RESPONSIBILITY. With the "Immo hilft"
+                                    initiative, we in the real estate industry are doing just that.
                                 @else
-                                    Manchmal scheint es, als würden die Krisen kein Ende nehmen – gerade in den letzten zwei Jahren und besonders in den letzten paar Tagen. In solchen Zeiten sind zwei Dinge besonders wichtig: ZUSAMMENHALTEN und VERANTWORTUNG ÜBERNEHMEN. Mit der Initiative „Immo hilft“ machen wir aus der Immobilienwirtschaft genau das.
+                                    <p>Der Krieg ist noch lange nicht vorbei und wann die aus der Ukraine Geflüchteten
+                                        wieder in ihre Heimat zurückkehren können, steht leider in den Sternen. Aktuell
+                                        sind rund 13.000 Kinder und Jugendliche in Österreichs Schulen.</p>
                                 @endif
-                            </p>
+                            </div>
 
 
                             <div class="font-bold my-10 text-3xl md:text-5xl"
@@ -37,11 +44,86 @@
                                  x-transition:leave="transition ease-in duration-300"
                                  x-transition:leave-start="opacity-100 scale-100"
                                  x-transition:leave-end="opacity-0 scale-90"
-                            >IMMO HILFT.
+                            >
+
+                                @if(session('applocale') == 'uk')
+                                    immo продовжує допомагати!
+                                @elseif(session('applocale') == 'en')
+                                    immo hilft goes on
+                                @else
+                                    immo hilft weiter!
+                                @endif
                             </div>
 
 
                             <div class="font-medium md:font-semibold"
+                                 x-show="show > 3" x-cloak
+                                 x-transition:enter="transition ease-out duration-300"
+                                 x-transition:enter-start="opacity-0 scale-90"
+                                 x-transition:enter-end="opacity-100 scale-100"
+                                 x-transition:leave="transition ease-in duration-300"
+                                 x-transition:leave-start="opacity-100 scale-100"
+                                 x-transition:leave-end="opacity-0 scale-90">
+
+                                @if(session('applocale') == 'uk')
+                                    <p class="font-medium md:font-semibold">
+                                        Проблема полягає в тому, що деякі з їхніх батьків вже працюють, а діти
+                                        потребують спілкування з однолітками. Тому Immo Hilft розпочинає кампанію з
+                                        австрійськими спортивними, розважальними та культурними клубами, щоб дати
+                                        молодим українцям можливість брати активну участь. Футбол, піші прогулянки,
+                                        ремесла, баскетбол, плавання - все можливо, і ми прагнемо створити якомога ширшу
+                                        пропозицію.
+                                    </p>
+                                    <p class="font-medium md:font-semibold">
+                                        Тому в найближчі кілька тижнів ми опублікуємо сайт з календарем, де клуби та
+                                        установи зможуть реєструватися та анонсувати свої заходи. Сайт буде створений
+                                        компанією immohilft українською мовою, і діти зможуть реєструватися через
+                                        інтернет.
+                                    </p>
+                                    <p class="font-medium md:font-semibold">
+                                        Як ви можете допомогти: Візьміть шефство та мотивуйте клуб по сусідству до
+                                        участі. Ми поширимо інформацію в українській громаді!
+                                    </p>
+                                    <p class="font-medium md:font-semibold">
+                                        Ми сподіваємося, що ця ініціатива зробить життя дітей та молоді більш
+                                        різноманітним і цікавим, а також забезпечить інтеграцію на час вашого
+                                        перебування тут.
+                                    </p>
+                                @elseif(session('applocale') == 'en')
+                                    <p class="font-medium md:font-semibold">
+                                        The hotline for people displaced by war from Ukraine can be reached at 0043 1 -
+                                        2676 870 9460.
+                                    </p>
+                                @else
+                                    <p class="font-medium md:font-semibold">
+                                        Die Herausforderung: Ihre Eltern arbeiten bereits zum Teil und die Kinder
+                                        brauchen Anschluss an ihresgleichen. Immo Hilft startet deshalb eine Aktion mit
+                                        österreichischen Sport-, Freizeit und Kulturvereinen, die dem ukrainischen
+                                        nachwuchs Gelegenheit bieten sollen, sich aktiv zu engagieren. Fußball, Wandern,
+                                        Basteln, Basketball, Schwimmen – alles ist möglich und wir haben das Ziel, ein
+                                        möglichst breites Angebot zu schaffen.
+                                    </p>
+                                    <p class="font-medium md:font-semibold">
+                                        Wir werden deshalb in den nächsten Wochen eine Website mit einem Kalender
+                                        veröffentlichen, bei dem sich Vereine und Institutionen eintragen können und
+                                        ihre Aktivitäten bekanntgeben. Die Seite wird von immohilft in ukrainischer
+                                        Sprache bereitgestellt, die Kinder können sich über das Internet anmelden.
+                                    </p>
+                                    <p class="font-medium md:font-semibold">
+                                        Wie Sie helfen können: Übernehmen Sie die Patronanz und motivieren Sie einen
+                                        Verein im Umfeld zum Mitmachen. Wir sorgen für die Verbreitung in der
+                                        ukrainischen Community!
+                                    </p>
+                                    <p class="font-medium md:font-semibold">
+                                        Wir hoffen, mit dieser Initiative das Leben der Kinder und Jugendlichen
+                                        abwechslungsreicher und spannender zu gestalten und so auch für Integration für
+                                        die Zeit Ihres Hierseins zu sorgen.
+                                    </p>
+                                @endif
+                            </div>
+
+
+                            <div class="font-medium md:font-semibold mt-20"
                                  x-show="show > 3"
                                  x-transition:enter="transition ease-out duration-300"
                                  x-transition:enter-start="opacity-0 scale-90"
@@ -54,18 +136,28 @@
                                     <p class="font-medium md:font-semibold">
                                         В ініціативі «Immo Hilft» -
                                         <x-initiators/>
-                                        - саме цим ми і займаємося в галузі нерухомості. Ініціатори закликають надати тимчасово порожні квартири для біженців з України. Таким чином кожен може надати допомогу швидко і без бюрократії.
+                                        - саме цим ми і займаємося в галузі нерухомості. Ініціатори закликають
+                                        надати тимчасово порожні квартири для біженців з України. Таким чином кожен
+                                        може надати допомогу швидко і без бюрократії.
                                         <br>
-                                        Якщо кожна велика компанія в Австрії вирішить надати ОДНУ квартиру, ми можемо запропонувати притулок до 5000 осіб. Ми звертаємося не тільки до компаній, ми також вдячні за будь-яку допомогу від приватних осіб. Давайте триматися разом і допомагати людям, які терміново потребують нашої допомоги прямо зараз!
+                                        Якщо кожна велика компанія в Австрії вирішить надати ОДНУ квартиру, ми
+                                        можемо запропонувати притулок до 5000 осіб. Ми звертаємося не тільки до
+                                        компаній, ми також вдячні за будь-яку допомогу від приватних осіб. Давайте
+                                        триматися разом і допомагати людям, які терміново потребують нашої допомоги
+                                        прямо зараз!
                                     </p>
                                 @elseif(session('applocale') == 'en')
                                     <p class="font-medium md:font-semibold">
                                         The initiators -
                                         <x-initiators/>
-                                        - are calling on people to provide temporary empty rooms in Austria for refugees from Ukraine.
+                                        - are calling on people to provide temporary empty rooms in Austria for
+                                        refugees from Ukraine.
                                     </p>
                                     <p class="font-medium md:font-semibold">
-                                        In this way, everyone can help quickly and without bureaucracy. If every major real estate company in Austria decides to provide ONE flat, we can offer refuge to up to 5,000 people. However, we are not only appealing to companies, but are also grateful for any help from private individuals.
+                                        In this way, everyone can help quickly and without bureaucracy. If every
+                                        major real estate company in Austria decides to provide ONE flat, we can
+                                        offer refuge to up to 5,000 people. However, we are not only appealing to
+                                        companies, but are also grateful for any help from private individuals.
                                     </p>
                                     <p class="font-medium md:font-semibold">
                                         Let's stand together and help people who urgently need our help right now!
@@ -73,37 +165,19 @@
                                 @else
                                     <p class="font-medium md:font-semibold">Die Initiatoren –
                                         <x-initiators/>
-                                        - rufen dazu auf, temporär leere Räume für geflüchtete Menschen aus der Ukraine zur Verfügung zu stellen.
+                                        - rufen dazu auf, temporär leere Räume für geflüchtete Menschen aus der
+                                        Ukraine zur Verfügung zu stellen.
                                     </p>
-                                    <p class="font-medium md:font-semibold">So kann jeder und jede rasch und ohne Bürokratie Hilfe leisten. Entscheidet sich jedes größere Immo-Unternehmen in Österreich dazu, EINE Wohnung bereitzustellen, bieten wir damit bis zu 5.000 Menschen eine Zuflucht. Wir appellieren aber nicht nur an Unternehmen, sondern sind auch für jede Hilfeleistung von Privatpersonen dankbar.</p>
-                                    <p class="font-medium md:font-semibold">Halten wir zusammen und helfen wir Menschen, die unsere Hilfe gerade dringend benötigen!</p>
+                                    <p class="font-medium md:font-semibold">So kann jeder und jede rasch und ohne
+                                        Bürokratie Hilfe leisten. Entscheidet sich jedes größere Immo-Unternehmen in
+                                        Österreich dazu, EINE Wohnung bereitzustellen, bieten wir damit bis zu 5.000
+                                        Menschen eine Zuflucht. Wir appellieren aber nicht nur an Unternehmen,
+                                        sondern sind auch für jede Hilfeleistung von Privatpersonen dankbar.</p>
+                                    <p class="font-medium md:font-semibold">Halten wir zusammen und helfen wir
+                                        Menschen, die unsere Hilfe gerade dringend benötigen!</p>
                                 @endif
                             </div>
 
-
-{{--                            <div class="font-medium md:font-semibold"--}}
-{{--                                 x-show="show > 4" x-cloak--}}
-{{--                                 x-transition:enter="transition ease-out duration-300"--}}
-{{--                                 x-transition:enter-start="opacity-0 scale-90"--}}
-{{--                                 x-transition:enter-end="opacity-100 scale-100"--}}
-{{--                                 x-transition:leave="transition ease-in duration-300"--}}
-{{--                                 x-transition:leave-start="opacity-100 scale-100"--}}
-{{--                                 x-transition:leave-end="opacity-0 scale-90">--}}
-
-{{--                                @if(session('applocale') == 'uk')--}}
-{{--                                    <p class="font-medium md:font-semibold">--}}
-{{--                                        «гаряча лінія» для всіх осіб які втікли з України внаслідок війни за номером 0043 1 – 2676 870 9460.--}}
-{{--                                    </p>--}}
-{{--                                @elseif(session('applocale') == 'en')--}}
-{{--                                    <p class="font-medium md:font-semibold">--}}
-{{--                                        The hotline for people displaced by war from Ukraine can be reached at 0043 1 - 2676 870 9460.--}}
-{{--                                    </p>--}}
-{{--                                @else--}}
-{{--                                    <p class="font-medium md:font-semibold">--}}
-{{--                                        Die Hotline für kriegsvertriebene Menschen aus der Ukraine ist unter der Telefonnummer 0043 1 – 2676 870 9460 erreichbar.--}}
-{{--                                    </p>--}}
-{{--                                @endif--}}
-{{--                            </div>--}}
 
                             <a href="#apply" x-show="show > 4" class="mt-10 shadow-xl hover:shadow-lg focus:shadow-lg flex w-full justify-center bg-flag-blue text-white font-bold text-xl py-3">{{ __('contribute') }}</a>
 
@@ -130,11 +204,14 @@
             <div class="w-full md:w-1/2 flex justify-end md:justify-center items-center">
                 <div class="max-w-xl">
                     @if(session('applocale') == 'uk')
-                        <h1>Ми знаємо, що житлової площі обмаль. Крім того, ми також будемо вдячні, якщо ви можете зробити пожертву на рахунок Caritas:</h1>
+                        <h1>Ми знаємо, що житлової площі обмаль. Крім того, ми також будемо вдячні, якщо ви можете
+                            зробити пожертву на рахунок Caritas:</h1>
                     @elseif(session('applocale') == 'en')
-                        <h1>Living space is a rare good, we know that. Alternatively we appreciate your donation with the subject IMMO HILFT to the account of our collaboration partner Caritas</h1>
+                        <h1>Living space is a rare good, we know that. Alternatively we appreciate your donation with
+                            the subject IMMO HILFT to the account of our collaboration partner Caritas</h1>
                     @else
-                        <h1>Wohnraum ist knapp, wir wissen das. Wir sind Ihnen alternativ auch für eine Spende mit dem Betreff IMMO HILFT an das Konto unseres Partners, der Caritas dankbar:</h1>
+                        <h1>Wohnraum ist knapp, wir wissen das. Wir sind Ihnen alternativ auch für eine Spende mit dem
+                            Betreff IMMO HILFT an das Konto unseres Partners, der Caritas dankbar:</h1>
                     @endif
                 </div>
             </div>
@@ -149,13 +226,15 @@
                 @elseif(session('applocale') == 'en')
                     <p>Please use as "IMMO-HILFT" subject.</p>
                     <p>After you donated, you can send an Email to
-                        <a href="mailto:spenden@immo-hilft.at">spenden@immo-hilft.at</a>, if you want to show up in our dontaors list.
+                        <a href="mailto:spenden@immo-hilft.at">spenden@immo-hilft.at</a>, if you want to show up in our
+                        dontaors list.
                     </p>
                     <p>Of course, you are also welcome to donate anonymously.</p>
                 @else
                     <p>Bitte geben Sie als Verwendungszweck "IMMO-HILFT" an.</p>
                     <p>Wenn Sie gespendet haben, schicken Sie bitte ein E-Mail an
-                        <a href="mailto:spenden@immo-hilft.at">spenden@immo-hilft.at</a>, damit wir Sie in unsere Spenderliste aufnehmen können.
+                        <a href="mailto:spenden@immo-hilft.at">spenden@immo-hilft.at</a>, damit wir Sie in unsere
+                        Spenderliste aufnehmen können.
                     </p>
                     <p>Natürlich können Sie aber gerne auch anonym spenden.</p>
                 @endif
