@@ -24,16 +24,13 @@
                                     останні кілька днів. У такі часи особливо важливі дві речі: триматися РАЗОМ і ВЗЯТИ
                                     ВІДПОВІДАЛЬНІСТЬ.
                                 @elseif(session('applocale') == 'en')
-                                    Sometimes it seems as if there is no end to the crises - in the last two years and
-                                    especially in the last few days. In times like these, two things are extremely
-                                    important: STAYING TOGETHER and TAKING RESPONSIBILITY. With the "Immo hilft"
-                                    initiative, we in the real estate industry are doing just that.
+                                    The war is far from over, and when the refugees from Ukraine will be able to
+                                    return to their homeland is unfortunately uncertain. Currently, there are around
+                                    13,000 children and adolescents in Austria's schools.
                                 @else
-                                    <p>
-                                        The war is far from over, and when the refugees from Ukraine will be able to
-                                        return to their homeland is unfortunately uncertain. Currently, there are around
-                                        13,000 children and adolescents in Austria's schools.
-                                    </p>
+                                    Der Krieg ist noch lange nicht vorbei und wann die aus der Ukraine Geflüchteten
+                                    wieder in ihre Heimat zurückkehren können, steht leider in den Sternen. Aktuell
+                                    sind rund 13.000 Kinder und Jugendliche in Österreichs Schulen.
                                 @endif
                             </div>
 
