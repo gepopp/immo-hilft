@@ -91,7 +91,7 @@
                                         різноманітним і цікавим, а також забезпечить інтеграцію на час вашого
                                         перебування тут.
                                     </p>
-                                @elseif(session('applocale') == 'en')
+                                @elseif(session('applocale') == 'de')
                                     <p class="font-medium md:font-semibold">
                                         Die Herausforderung: Ihre Eltern arbeiten bereits zum Teil und die Kinder
                                         brauchen Anschluss an ihresgleichen. Immo Hilft startet deshalb eine Aktion mit
