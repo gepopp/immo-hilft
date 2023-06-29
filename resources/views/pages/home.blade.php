@@ -29,9 +29,11 @@
                                     important: STAYING TOGETHER and TAKING RESPONSIBILITY. With the "Immo hilft"
                                     initiative, we in the real estate industry are doing just that.
                                 @else
-                                    <p>Der Krieg ist noch lange nicht vorbei und wann die aus der Ukraine Geflüchteten
-                                        wieder in ihre Heimat zurückkehren können, steht leider in den Sternen. Aktuell
-                                        sind rund 13.000 Kinder und Jugendliche in Österreichs Schulen.</p>
+                                    <p>
+                                        The war is far from over, and when the refugees from Ukraine will be able to
+                                        return to their homeland is unfortunately uncertain. Currently, there are around
+                                        13,000 children and adolescents in Austria's schools.
+                                    </p>
                                 @endif
                             </div>
 
@@ -91,11 +93,6 @@
                                     </p>
                                 @elseif(session('applocale') == 'en')
                                     <p class="font-medium md:font-semibold">
-                                        The hotline for people displaced by war from Ukraine can be reached at 0043 1 -
-                                        2676 870 9460.
-                                    </p>
-                                @else
-                                    <p class="font-medium md:font-semibold">
                                         Die Herausforderung: Ihre Eltern arbeiten bereits zum Teil und die Kinder
                                         brauchen Anschluss an ihresgleichen. Immo Hilft startet deshalb eine Aktion mit
                                         österreichischen Sport-, Freizeit und Kulturvereinen, die dem ukrainischen
@@ -118,6 +115,31 @@
                                         Wir hoffen, mit dieser Initiative das Leben der Kinder und Jugendlichen
                                         abwechslungsreicher und spannender zu gestalten und so auch für Integration für
                                         die Zeit Ihres Hierseins zu sorgen.
+                                    </p>
+                                @else
+                                    <p class="font-medium md:font-semibold">
+                                        The challenge: Some of their parents already work and the children need to be
+                                        connected to their peers. Immo Hilft is therefore launching a campaign with
+                                        Austrian sports, leisure and cultural clubs that will offer the young Ukrainians
+                                        the opportunity to get actively involved. Football, hiking, handicrafts,
+                                        basketball, swimming - everything is possible and we aim to create as broad an
+                                        offer as possible.
+                                    </p>
+                                    <p class="font-medium md:font-semibold">
+                                        Therefore, in the next few weeks we will publish a website with a calendar where
+                                        clubs and institutions can register and announce their activities. The site will
+                                        be provided by immohilft in Ukrainian and children will be able to register via
+                                        the internet.
+                                    </p>
+                                    <p class="font-medium md:font-semibold">
+                                        How you can help: Take over the patronage and motivate a club in the
+                                        neighbourhood to participate. We will spread the word in the Ukrainian
+                                        community!
+                                    </p>
+                                    <p class="font-medium md:font-semibold">
+                                        We hope that this initiative will make the lives of the children and young
+                                        people more varied and exciting and thus also ensure integration for the time
+                                        you are here.
                                     </p>
                                 @endif
                             </div>
